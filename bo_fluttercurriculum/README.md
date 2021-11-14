@@ -47,3 +47,37 @@ samples, guidance on mobile development, and a full API reference.
   - bottomNavigationBar，底部导肮
   - 等等属性,后期讨论
 - 80%的代码，基于构造函数创建所需类型对象，为对象的属性继续创建所需对象。写法类似于构造js对象
+
+### 1.Layout
+
+- https://flutter.cn/docs/developmentuilayout
+- flutter组件，默认均不包括内/外边距/高宽属性。
+- 因此,当需要内外边距边框时,需要置于容器中。
+- 但flutter本身没有区分组件与容器，容器也是组件，一切皆为组件
+- 有的容器仅能放单元素;单元素容器:有的可以放多个元素，多元素容器。通过提供的属性可以判断
+  - child
+  - children
+
+#### 1.Row & Column
+
+- https://flutter.cn/docs/developmentui/layouttaligning-widgets
+- row，多元素容器，声明一个行。行中的组件在一行横向排列
+- column，多元素容器，声明一个列。列中的组件在一列纵向排列
+- mainaxis/crossaxis，主轴/交叉轴，与排列方向有关。即，row的主轴为X轴，column的主轴为Y轴
+- 默认均占用其主轴的最大空间，即父元素的空间
+- 即，声明一个列，纵向占用最大空间
+  - mainAxisSize. MainAxisSize.min，wrap，包裹，仅占用所需空间
+  - mainAxisAlignment.MainAxisAlignment，子项对齐方式，剩余空间的分配
+    -  spaceBetween，2端对齐
+    -  spacearound，每个元素占用相等剩余空间，包括第一/最后，的2端 
+    - spaceEvenly，剩余空间均匀分布在每个元素之间
+  - crossAxisAlignment.CrossAxisAlignment，纵轴对齐方向
+  -  children，集合，其中的多个组件
+
+### 2.Texts
+
+- Text文本
+  - 第一项必填，字符串文本内容
+  - textAlign，字体对齐方向
+  - style，样式，TextStyle
+    - color/fontSize/fontWeight/fontStyle，等等字体样式属性，size默认14
