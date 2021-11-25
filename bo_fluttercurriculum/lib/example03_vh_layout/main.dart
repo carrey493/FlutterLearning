@@ -18,22 +18,37 @@ class MyHomePage extends StatelessWidget{
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children:<Widget>[
-          Text('row1',style: TextStyle(fontSize: 30)),
-          Text('row2',style: TextStyle(fontSize: 30)),
-          Text('row3',style: TextStyle(fontSize: 30)),
-          Column(
-            mainAxisSize: MainAxisSize.min,
+      body: Column(
+        children: <Widget>[
+          buildRow(),
+          Row(
             children: <Widget>[
-              Text('col1',style: TextStyle(fontSize: 30)),
-              Text('col2',style: TextStyle(fontSize: 30)),
+              Expanded(flex:1,child: Text('row1',style: TextStyle(fontSize: 30)),
+              ),
+              Expanded(flex:2,child: Center(child: Text('row1',style: TextStyle(fontSize: 30)))),
             ],
           )
-          ]
-      ),
+        ],
+      )
     );
+  }
+
+  Row buildRow() {
+    return Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children:<Widget>[
+              Text('row1',style: TextStyle(fontSize: 30)),
+              Text('row2',style: TextStyle(fontSize: 30)),
+              Text('row3',style: TextStyle(fontSize: 30)),
+              Column(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  Text('col1',style: TextStyle(fontSize: 30)),
+                  Text('col2',style: TextStyle(fontSize: 30)),
+                ],
+              )
+            ]
+        );
   }
 }

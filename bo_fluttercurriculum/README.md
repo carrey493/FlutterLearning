@@ -81,3 +81,11 @@ samples, guidance on mobile development, and a full API reference.
   - textAlign，字体对齐方向
   - style，样式，TextStyle
     - color/fontSize/fontWeight/fontStyle，等等字体样式属性，size默认14
+
+### 3.Expanded
+
+- Expanded，单元素容器。
+- 在主轴，占用尽可能大的剩余空间，类似match_parent会忽略掉mainAxisAlignment对齐方式的布局
+- 当元素内容超过设备屏幕尺寸时，可用于包裹限制元素(FittedBox也可)
+  - flex.当多个expanded并列时，声明占用剩余空间的比重
+- rowlcolumn/expanded，内容超出屏幕,均不支持滚动
