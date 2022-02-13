@@ -89,3 +89,26 @@ samples, guidance on mobile development, and a full API reference.
 - 当元素内容超过设备屏幕尺寸时，可用于包裹限制元素(FittedBox也可)
   - flex.当多个expanded并列时，声明占用剩余空间的比重
 - rowlcolumn/expanded，内容超出屏幕,均不支持滚动
+
+### 4.SizeBox & Padding & Margin  & Center  & FittedBox
+
+- Padding/Margin，单一容器，仅支持内或外边距,没有高宽/边框等属性
+- Center单元素容器，使内容居中
+- SizedBox.元素容器，支持高宽，无内外边距
+- FittedBox，年元素容器，可控制内部元素的缩放
+- dp，像素密度，设备屏幕尺寸无关的。描述控件间距离等。Flutter默认单位
+
+### 5.Container
+
+- Container，单元素容器，支持边框/内外边距/高宽等属性的容器。便于扩展，建议使用
+- color，背景色
+- heightwidth
+- padding/margin，内外边距，EdgeInsets 下的方法声明。
+- EdgeInsets.only()/Edgeinsets. aWM)/EdgeInsets.fromLTRB等
+- decoration.BoxDecoration。绘制在child后的装饰。更详细的设置
+  - color，背景色。Colors/Color
+  - image，背景图片
+  - border，边框，Border.allcolor, width)等方法。或Border()
+    - bottom: BorderSide(color , width)
+- borderRadius.BorderRadius.al副Radius.circular(10))，圆角
+- shape，形状
