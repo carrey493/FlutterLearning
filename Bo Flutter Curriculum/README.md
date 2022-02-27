@@ -112,3 +112,14 @@ samples, guidance on mobile development, and a full API reference.
     - bottom: BorderSide(color , width)
 - borderRadius.BorderRadius.al副Radius.circular(10))，圆角
 - shape，形状
+
+### 6.GridView
+
+- Gridview.count可指定列的数量，自动计算宽度
+- Gridview.extent，可指定栅格宽度,自动计算列数
+- 支持自动滚动，自动适应横竖屏切换，自动重用组件对象的平滑滚动
+- 即，自动实现了原生Android中的ViewHolder
+  - maxCrossAxis Extent，声明每个棚格的宽度
+  - padding
+  - mainAxis SpacinglcrossAxisSpacing，主/交叉轴外边距 
+  - children
