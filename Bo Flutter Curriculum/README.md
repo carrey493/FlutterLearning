@@ -48,7 +48,7 @@ samples, guidance on mobile development, and a full API reference.
   - 等等属性,后期讨论
 - 80%的代码，基于构造函数创建所需类型对象，为对象的属性继续创建所需对象。写法类似于构造js对象
 
-### 1.Layout
+### 2.Layout
 
 - https://flutter.cn/docs/developmentuilayout
 - flutter组件，默认均不包括内/外边距/高宽属性。
@@ -74,7 +74,7 @@ samples, guidance on mobile development, and a full API reference.
   - crossAxisAlignment.CrossAxisAlignment，纵轴对齐方向
   -  children，集合，其中的多个组件
 
-### 2.Texts
+#### 2.Texts
 
 - Text文本
   - 第一项必填，字符串文本内容
@@ -82,7 +82,7 @@ samples, guidance on mobile development, and a full API reference.
   - style，样式，TextStyle
     - color/fontSize/fontWeight/fontStyle，等等字体样式属性，size默认14
 
-### 3.Expanded
+#### 3.Expanded
 
 - Expanded，单元素容器。
 - 在主轴，占用尽可能大的剩余空间，类似match_parent会忽略掉mainAxisAlignment对齐方式的布局
@@ -90,7 +90,7 @@ samples, guidance on mobile development, and a full API reference.
   - flex.当多个expanded并列时，声明占用剩余空间的比重
 - rowlcolumn/expanded，内容超出屏幕,均不支持滚动
 
-### 4.SizeBox & Padding & Margin  & Center  & FittedBox
+#### 4.SizeBox & Padding & Margin  & Center  & FittedBox
 
 - Padding/Margin，单一容器，仅支持内或外边距,没有高宽/边框等属性
 - Center单元素容器，使内容居中
@@ -98,7 +98,7 @@ samples, guidance on mobile development, and a full API reference.
 - FittedBox，年元素容器，可控制内部元素的缩放
 - dp，像素密度，设备屏幕尺寸无关的。描述控件间距离等。Flutter默认单位
 
-### 5.Container
+### 3.Container
 
 - Container，单元素容器，支持边框/内外边距/高宽等属性的容器。便于扩展，建议使用
 - color，背景色
@@ -113,7 +113,7 @@ samples, guidance on mobile development, and a full API reference.
 - borderRadius.BorderRadius.al副Radius.circular(10))，圆角
 - shape，形状
 
-### 6.GridView
+#### 1.GridView
 
 - Gridview.count可指定列的数量，自动计算宽度
 - Gridview.extent，可指定栅格宽度,自动计算列数
@@ -123,3 +123,17 @@ samples, guidance on mobile development, and a full API reference.
   - padding
   - mainAxis SpacinglcrossAxisSpacing，主/交叉轴外边距 
   - children
+
+#### 2.ListView
+
+https://flutter.cn/docs/cookbook/lists/basic-list
+
+- 可以用来放置一组相似的组件 或当内部元素过长而自滚动的容器
+- 与column相比 支持长度超过一屏的滚动
+- 项默认不支持点击
+- Divider() 分割线 可作为项直接使用
+- ListView 当项固定时 可直接基于children属性创建
+  - padding ListView的内边距 不是项的内边距
+  - shrinkWrap 用于item高度不确定时 适配item内容高度 避免内容溢出
+  - itemExtent 可固定iten=m 高度 超过会异常
+
